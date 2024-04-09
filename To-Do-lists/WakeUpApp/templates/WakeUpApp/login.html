@@ -1,0 +1,21 @@
+{% load static %}
+{% load i18n %}
+
+{% block body %}
+    <section class="loginSection">
+        <form  method="post" class="loginForm">
+            {% csrf_token %}
+                <legend class="loginFormName">Login</legend>
+                    <label class="loginLabel1">Username</label>
+                    <input class="loginInput1" type="text" name="username" placeholder="Username">
+                </div>
+                <div class="loginDiv2">
+                    <label class="loginLabel2">Password</label>
+                    <input class="loginInput2" type="password" name="password" placeholder="Password">
+                </div>
+                <button class="loginButton" type="submit">Login</button>
+                <p>Don't have an account? <a>Register here.</a><p>
+        </form>
+    </section>
+
+{% endblock %}
