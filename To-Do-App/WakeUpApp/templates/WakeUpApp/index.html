@@ -1,0 +1,174 @@
+{% extends "WakeUpApp/layout.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block body %}
+    <section class="section">
+        <aside class="sideBar">
+            <div class="barItem1">
+                <p class="barItemButton"><</p>
+            </div>
+            <div class="barItem">
+                <img class="barItemImage" src="{% static "icons/homeIcon.png" %}">
+                <p class="barItemName">Dashboard</p>
+            </div>
+            <div class="barItem">
+                <img class="barItemImage" src="{% static "icons/tasksIcon.png" %}">
+                <p class="barItemName">Completed Tasks</p>
+            </div>
+            <div class="barItem">
+                <img class="barItemImage" src="{% static "icons/notificationsIcon.png" %}">
+                <p class="barItemName">Notifications</p>
+            </div>
+            <div class="barItem">
+                <img class="barItemImage" src="{% static "icons/favouriteIcon.png" %}">
+                <p class="barItemName">Favourites</p>
+            </div>
+            <div class="barItem">
+                <img class="barItemImage" src="{% static "icons/settingsIcon.png" %}">
+                <p class="barItemName">Settings</p>
+            </div>
+            <div class="barItem">
+                <img class="barItemImage" src="{% static "icons/logoutIcon.png" %}">
+                <p class="barItemName">
+                    {% if user.is_authenticated %}
+                    <a href="{% url "logout" %}">Logout</a>
+                    {% else %}
+                    <a href="{% url "login" %}">Login</a>
+                    {% endif %}
+                </p>
+            </div>
+        </aside>
+        <main class="main">
+            <div class="mainLeft">
+                <div class="mainCalender">
+                    <div class="mainMonth">
+                        <div class="prev"><</div>
+                        <div class="date"></div>
+                        <div class="next">></div>
+                    </div>
+                    <div class="mainWeekdays">
+                        <div>MON</div>
+                        <div>TUE</div>
+                        <div>WED</div>
+                        <div>THUR</div>
+                        <div>FRI</div>
+                        <div>SAT</div>
+                        <div>SUN</div>
+                    </div>
+                    <div class="mainDays">
+                    </div>
+                </div>
+            </div>
+            <div class="mainRight">
+                
+            </div>
+        </main>
+        <script type="text/javascript">
+            const calender = document.querySelector('.mainCalender');
+            const date = document.querySelector('.date');
+            const daysContainer = document.querySelector(".mainDays");
+            const prev = document.querySelector(".prev");
+            const next = document.querySelector(".next");
+
+            let today = new Date();
+            let activeDay;
+            let month = today.getMonth();
+            let year = today.getFullYear();
+
+            const months = [
+                "January",
+                "February",
+                "March",
+                "April",
+                "May",
+                "June",
+                "July",
+                "August",
+                "September",
+                "October",
+                "November",
+                "December"
+            ];
+
+            // function to add days
+
+            function initCalender() {
+                // to get prev month days and current month all days and next month days
+                const firstDay = new Date(year, month, 1);
+                const lastDay = new Date(year, month+1, 0);
+                const prevLastDay = new Date(year, month, 0);
+                    const prevDays = prevLastDay.getDate();
+                    const lastDate = lastDay.getDate();
+                    const day = firstDay.getDay();
+                    const nextDays = 7 - lastDay.getDay() -1;
+                    // update the top of the calender
+                    date.innerHTML = months[month] + ' ' + year;
+
+                    // adding days on DOM 
+                    let days = " ";
+
+                    // pre month days
+                    for (let x = day; x > 0; x-- ) {
+                        days += `<div class="day prev-date">${prevDays - x + 1}</div>`;
+                    }
+
+                    // current month days
+                    for (let i = 1; i <= lastDate; i++) {
+                        // if day is today add class today
+                        if (
+                        i === new Date().getDate() &&
+                        year === new Date().getFullYear() &&
+                        month === new Date().getMonth()
+                        ) {
+                          days += `<div class="day today">${i}</div>`
+                        }
+                        //add removing as it is
+                        else {
+                            days += `<div class="day">${i}</div>`
+                        }
+                    }
+                        // next month days
+                        for (let j = 1; j <= nextDays; j++) {
+                            days += `<div class="day next-date "> ${j}</div>`;
+                        }
+
+                    daysContainer.innerHTML = days;
+            }
+
+            initCalender();
+
+            // prev month
+            function prevMonth() {
+                month --;
+                if (month < 0) {
+                    month= 11;
+                    year --;
+                }
+                initCalender();
+            }
+            // next month
+            function nextMonth() {
+                month ++;
+                if(month > 11) {
+                    month = 0;
+                    year++;
+                }
+                initCalender();
+            }
+            // add eventListener on prev and next
+            prev.addEventListener("click", prevMonth);
+            next.addEventListener("click", nextMonth);
+
+            // our calender is ready
+            // lets add goto date and go to today functionality
+
+
+
+
+
+
+        </script>
+    </section>
+
+{% endblock %}

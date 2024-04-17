@@ -1,0 +1,101 @@
+* {
+    font-family: sans-serif;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.loginSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(226, 230, 255);
+    font-family: "sans-serif";
+}
+.loginSection .loginForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+}
+.loginSection .loginForm .loginFrame {
+    height: 400px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 60px;
+    background-color: white;
+}
+.loginSection .loginForm .loginFrame .loginFormName {
+    margin: 20px;
+    font-size: 150%;
+    color: rgb(25, 21,77);
+}
+.loginSection .loginForm .loginFrame .loginDiv1 {
+    margin: 20px;
+}
+.loginSection .loginForm .loginFrame .loginDiv1 .loginLabel1 {
+    font-size: 130%;
+    color: rgb(25, 21,77);
+}
+.loginSection .loginForm .loginFrame .loginDiv1 .loginInput1 {
+    width: 250px;
+    height: 50px;
+    border-radius: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 110%;
+    border: 1px solid rgb(25, 21,77);
+}
+.loginSection .loginForm .loginFrame .loginDiv1 .loginInput1:valid,
+.loginSection .loginForm .loginFrame .loginDiv1 .loginInput1:active {
+    color: rgb(25, 21,77);
+}
+.loginSection .loginForm .loginFrame .loginDiv2 {
+    margin: 20px;
+}
+.loginSection .loginForm .loginFrame .loginDiv2 .loginLabel2 {
+    font-size: 130%;
+    color: rgb(25, 21,77);
+}
+.loginSection .loginForm .loginFrame .loginDiv2 .loginInput2 {
+    width: 250px;
+    height: 50px;
+    border-radius: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 110%;
+    border: 1px solid rgb(25, 21,77);
+}
+.loginSection .loginForm .loginFrame .loginDiv2 .loginInput2:valid,
+.loginSection .loginForm .loginFrame .loginDiv2 .loginInput2:active {
+    color: rgb(25, 21,77);
+}
+.loginSection .loginForm .loginFrame .loginButton {
+    margin: 10px;
+    width: 100px;
+    height: 40px;
+    border-radius: 30px;
+    border: none;
+    background-color:rgb(25, 21,77);
+    color: white;
+}
+.loginSection .loginForm .loginFrame .loginError {
+    margin-top: 10px;
+    color: red;
+}
+.loginSection .loginForm .loginFrame .loginOption {
+    margin: 20px;
+}
+.loginSection .loginForm .loginFrame .loginOption .loginRegister {
+    color: rgb(25, 21,77);
+    font-weight: bold;
+}
