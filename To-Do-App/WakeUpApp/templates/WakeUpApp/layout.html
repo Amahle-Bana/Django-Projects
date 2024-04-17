@@ -1,0 +1,66 @@
+{% load static %}
+{% load i18n %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WakeUp!</title>
+        <link href="{% static "css/style.css" %}" rel="stylesheet">
+    </head>
+    <body>
+        <header class="header">
+            <h1 class="headerName">WakeUp!</h1>
+            <div class="headerBar">
+                <input class="headerSearch" type="text" name="search" placeholder="mm/yyyy">
+                <div class="headerButton"><img class="headerButtonIcon" src="{% static "icons/searchIcon.png" %}"></div>
+            </div>
+            {% if user.is_authenticated %}
+                <p class="headingGreeting">Hey! {{user.username}}</p>
+            {% else %}
+                <p class="headingGreeting"><a href="{% url "login" %}">Login</a> | <a href="{% url "register" %}">Register</a></p>
+            {% endif %}
+        </header>
+
+        <script type="text/javascript">
+            const searchButton = document.querySelector(".headerButton");
+            const searchDate = document.querySelector(".headerSearch");
+
+            searchDate.addEventListener("input", (e) => {
+                // allow only numbers remove anything else
+                searchDate.value = searchDate.value.replace(/[^0-9/]/g, "");
+                if (searchDate.value.length === 2) {
+                    // add a slash if two numbers entered
+                    searchDate.value += "/";
+                }
+                if (searchDate.value.length > 7) {
+                    // don't allow more than 7 characters
+                    searchDate.value = searchDate.value.slice(0,7);
+                }
+                // if we remove until slash its not removing
+                if(e.inputType === "deleteContentBackward") {
+                    if (searchDate.value.length === 3) {
+                        searchDate.value = searchDate.value.slice(0,2);
+                    }
+                }
+            });
+
+            searchButton.addEventListener("click", gotoDate);
+            // function to go to entered date
+            function gotoDate() {
+                const dateArr = searchDate.value.split("/");
+                // date validation
+                if(dateArr.length === 2 ) {
+                    if(dateArr[0] > 0 && dateArr[0] < 13 && dateArr[1].length === 4) {
+                        month = dateArr[0] - 1;
+                        year = dateArr[1];
+                        initCalender();
+                        return;
+                    }
+                }
+                alert("invalid date");
+            }
+        </script>
+        {% block body %}
+        {% endblock body %}
+    </body>
+</html>
