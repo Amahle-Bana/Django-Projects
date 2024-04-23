@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.registerSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(226, 230, 255);
+    font-family: "sans-serif";
+}
+
+.registerSection .registerForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+}
+.registerSection .registerForm .registerFrame {
+    height: 400px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 60px;
+    background-color: white;
+}
+.registerSection .registerForm .registerFrame .registerFormName {
+    margin: 20px;
+    font-size: 150%;
+    color: rgb(25, 21,77);
+}
+.registerSection .registerForm .registerFrame .registerDiv1 {
+    margin: 20px;
+}
+.registerSection .registerForm .registerFrame .registerDiv1 .registerLabel1 {
+    font-size: 130%;
+    color: rgb(25, 21,77);
+}
+.registerSection .registerForm .registerFrame .registerDiv1 .registerInput1 {
+    width: 250px;
+    height: 50px;
+    border-radius: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 110%;
+    border: 1px solid rgb(25, 21,77);
+}
+.registerSection .registerForm .registerFrame .registerDiv1 .registerInput1:valid,
+.registerSection .registerForm .registerFrame .registerDiv1 .registerInput1:active {
+    color: rgb(25, 21,77);
+}
+.regregisterSection .regregisterForm .regregisterFrame .regregisterDiv2 {
+    margin: 20px;
+}
+.registerSection .registerForm .registerFrame .registerDiv2 .registerLabel2 {
+    font-size: 130%;
+    color: rgb(25, 21,77);
+}
+.registerSection .registerForm .registerFrame .registerDiv2 .registerInput2 {
+    width: 250px;
+    height: 50px;
+    border-radius: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 110%;
+    border: 1px solid rgb(25, 21,77);
+}
+.registerSection .registerForm .registerFrame .registerDiv2 .registerInput2:valid,
+.registerSection .registerForm .registerFrame .registerDiv2 .registerInput2:active {
+    color: rgb(25, 21,77);
+}
+.registerSection .registerForm .registerFrame .registerButton {
+    margin: 10px;
+    width: 100px;
+    height: 40px;
+    border-radius: 30px;
+    border: none;
+    background-color:rgb(25, 21,77);
+    color: white;
+}
+.registerSection .registerForm .registerFrame .registerError {
+    margin-top: 10px;
+    color: red;
+}
+.registerSection .registerForm .registerFrame .registerOption {
+    margin: 20px;
+}
+.registerSection .registerForm .registerFrame .registerOption .registerLogin {
+    color: rgb(25, 21,77);
+    font-weight: bold;
+}
