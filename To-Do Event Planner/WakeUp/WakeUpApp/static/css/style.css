@@ -1,0 +1,434 @@
+/*================ FONT IMPORTATION ====================*/
+@font-face { font-family: "logoFont";
+            src: url("./static/fonts/Righteous/Righteous-Regular.tff") format("tff");}
+
+@font-face { font-family: "AppFont";
+            src: url("./static/fonts/Noto_Sans/static/NotoSans_Condensed-Black.tff") format("tff");}  
+
+* {
+    margin: 0;
+    font-family: sans-serif;
+}
+a {
+    text-decoration: none;
+    color: rgb(25, 21,77);
+}
+
+/*============= 'index.html' STYLING ===============*/
+
+/* HEADER STYLING */
+.header {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    justify-items: center;
+    align-items: center;
+    height: 100px;
+}
+.headerName {
+    color: rgb(25, 21,77);
+    font-family: "logoFont",sans-serif;
+}
+.headerBar {
+    width: 700px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+.headerBar .headerSearch {
+    width: 500px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 50px;
+    font-size: 110%;
+    border: 1px solid rgb(25, 21,77);
+}
+.headerBar .headerSearch:valid,
+.headerBar .headerSearch:active {
+    outline: rgb(25, 21,77);
+}
+.headerBar .headerSearch:focus {
+    box-shadow: 0px 0px 1px 1px grey;
+    color: rgb(25, 21,77);
+}
+
+.headerBar .headerButton {
+    border: 1px solid rgb(25, 21,77);;
+    width: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background-color: rgb(25, 21,77);;
+}
+.headerButtonIcon {
+    width: 40px;
+    height: 40px;
+}
+.headerBar .headerButton:hover {
+    box-shadow: 0px 0px 1px 1px rgb(25, 21,77);
+}
+.headingGreeting {
+    font-size: 150%;
+    font-family: sans-serif;
+    color: rgb(25, 21,77);
+}
+.headingGreeting a {
+    text-decoration: none;
+ }
+
+/* SIDEBAR STYLING */
+
+.section {
+    background-color: rgb(226, 230, 255);
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    height: 650px;
+}
+.section .sideBar {
+    background-color: white;
+    width: 250px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+    margin-left: 20px;
+    border-radius: 60px;
+}
+.section .sideBar .barItem {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-content: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 220px;
+    border-radius: 30px;
+    cursor: pointer
+}
+.section .sideBar .barItem:hover {
+    background-color: rgb(226, 230, 255);
+}
+
+.section .sideBar .barItem1 .barItemButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+    margin-left: 140px;
+    color: white;
+    background-color: rgb(25, 21,77);
+    font-weight: bold;
+}
+.section .sideBar .barItem1 .barItemButton:hover {
+    box-shadow: 0px 0px 1px 1px rgb(25, 21,77);
+}
+.section .sideBar .barItem .barItemImage {
+    width: 50px;
+    margin-left: 10px;
+}
+.section .sideBar .barItem .barItemName {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 110%;
+    margin-left: 10px;
+    color: rgb(25, 21,77);
+}
+
+/* MAIN STYLING (LEFT-SIDE) */
+
+.main {
+    background-color: rgb(226, 230, 255);
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+.mainLeft {
+    padding: 20px;
+}
+.mainCalender {
+    background-color: white;
+    border-radius: 30px;
+    height:600px;
+    z-index: 2;
+}
+.mainCalender .mainMonth {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: bold;
+    height: 70px;
+    color:rgb(25, 21,77);
+}
+.mainCalender::before,
+.mainCalender::after {
+    content: "";
+    position: absolute;
+    top: 22.3%;
+    left: 78.6%;
+    width: 12px;
+    height: 83%;
+    border-radius: 0 10px 10px 0;
+    background-color: rgb(200, 208, 219);
+    transform: translate(-50%);
+}
+.mainCalender::before {
+    margin-top: 9px;
+    height: 80%;
+    left: calc(100% - 277px);
+    background-color: rgb(25, 21,77);
+}
+.mainCalender .mainMonth .date {
+    font-size: 150%;
+}
+.mainCalender .mainMonth .prev,
+.mainCalender .mainMonth .next {
+    cursor: pointer;
+    font-size: 150%;
+}
+.mainCalender .mainMonth .prev:hover,
+.mainCalender .mainMonth .next:hover {
+    font-weight: bolder;
+}
+.mainCalender .mainWeekdays {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+}
+.mainCalender .mainWeekdays div {
+    display: flex;
+    flex-direction: row;
+    justify-items: space-around;
+    align-items: center;
+    margin-left: 35px;
+    margin-right: 35px;
+    color: rgb(25, 21,77);
+    font-weight: bold;
+}
+.mainCalender .mainDays {
+    width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 17px;
+    margin-bottom: 5px;
+}
+.mainCalender .mainDays div {
+    width: 13%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: rgb(25, 21,77);
+    border-radius: 30px;
+    margin-top: 2px;
+    font-size: 2rem;
+    border: 2px solid transparent;
+}
+.mainCalender .mainDays .day:not(.prev-date, .next-date):hover {
+    color: rgb(25, 21,77);
+    background-color: white;
+    border: 2px solid rgb(25, 21,77);
+}
+.mainCalender .mainDays .prev-date,
+.mainCalender .mainDays .next-date {
+    color: rgb(200, 208, 219);
+}
+.mainCalender .mainDays .prev-date:hover,
+.mainCalender .mainDays .next-date:hover {
+    color: rgb(200, 208, 219);
+    border: 2px solid rgb(200, 208, 219);
+}
+.mainCalender .mainDays .active {
+    position: relative;
+    font-size: 2rem;
+    color: white;
+    background-color: rgb(25, 21,77);
+}
+/* MAIN STYLING (RIGHT-SIDE) */
+
+.mainRight {
+    display: flex;
+    flex-direction: column;
+}
+.mainRight .today-date {
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    font-weight: bold;
+    font-size: 100%;
+    color: rgb(25, 21,77);
+}
+.mainRight .events {
+    margin-left: 10px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    color: #19154d;
+}
+.mainRight .events .event {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid rgb(25, 21,77);
+    cursor: pointer;
+}
+.mainRight .events .event .eventItem {
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.mainRight .events .event .eventItem .eventTitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.mainRight .events .event .eventItem .eventTime {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.mainRight .eventPagination {
+    height: 50px;
+}
+.mainRight .eventButton {
+    height: 170px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.mainRight .eventButton .eventAdder {
+    border: none;
+    border-radius:30px;
+    font-size: 300%;
+    margin: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: white;
+    cursor: pointer;
+    background-color:rgb(25, 21,77);
+}
+.mainRight .eventButton .eventAdder:hover {
+    border: 3px solid rgb(25, 21,77);
+}
+/* MAIN STYLING (EVENT FORM) */
+
+.eventAddingForm {
+    border: 3px solid rgb(25, 21,77);
+    position: absolute;
+    height: 320px;
+    width: 350px;
+    border-radius: 40px;
+    top: 51%;
+    right: 6%;
+    background-color: white;
+}
+.openForm {
+    display: none;
+}
+.eventAddingForm .formTitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    margin-bottom: 10px;
+}
+.eventAddingForm .formTitle .formTitleName {
+    font-size: 120%;
+    color:rgb(25, 21,77);
+    margin-left: 20px;
+}
+.eventAddingForm .formTitle .formButton {
+    color:rgb(25, 21,77);
+    width: 40px;
+    left: 50%;
+    margin-right: 15px;
+    cursor: pointer;
+}
+.eventAddingForm .eventForm {
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.eventAddingForm .eventForm .eventName {
+    border: 2px solid rgb(25, 21,77);
+    width: 300px;
+    height: 40px;
+    border-radius: 30px;
+    padding: 0px 15px;
+    color:rgb(25, 21,77);
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.eventAddingForm .eventForm .eventTimeFrom {
+    border: 2px solid rgb(25, 21,77);
+    width: 300px;
+    height: 40px;
+    border-radius: 30px;
+    padding: 0px 15px;
+    color:rgb(25, 21,77);
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.eventAddingForm .eventForm .eventTimeTo {
+    border: 2px solid rgb(25, 21,77);
+    width: 300px;
+    height: 40px;
+    border-radius: 30px;
+    padding: 0px 15px;
+    color:rgb(25, 21,77);
+    font-size: 20px;
+}
+.eventAddingForm .eventForm .eventError {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: red;
+}
+.eventAddingForm .eventForm .eventSubmit {
+    width: 100px;
+    height: 50px;
+    border-radius: 20px;
+    background-color:rgb(25, 21,77);
+    border: none;
+    color: white;
+    cursor: pointer;
+    border: 1px solid black;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-top: 10;
+}

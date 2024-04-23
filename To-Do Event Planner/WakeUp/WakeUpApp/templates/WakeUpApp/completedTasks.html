@@ -1,0 +1,46 @@
+{% extends "WakeUpApp/layout.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block body %}
+    <section class="section">
+        <aside class="sideBar">
+            <div class="barItem" >
+                <img class="barItemImage" src="{% static "icons/homeIcon.png" %}">
+                <p class="barItemName">
+                    <a href="{% url "index" %}">Dashboard</a>
+                </p>
+            </div>
+            <div class="barItem">
+                <img class="barItemImage" src="{% static "icons/tasksIcon.png" %}">
+                <p class="barItemName">
+                    <a href="{% url "completedTasks" %}">Completed Tasks</a></p>
+            </div>
+            <div class="barItem" >
+                <img class="barItemImage" src="{% static "icons/notificationsIcon.png" %}">
+                <p class="barItemName">
+                    <a href="{% url "notifications" %}">Notifications</a>
+                </p>
+            </div>
+            <div class="barItem">
+                <img class="barItemImage" src="{% static "icons/favouriteIcon.png" %}">
+                <p class="barItemName">
+                    <a href="{% url "notifications" %}">Favourites</a>
+                </p>
+            </div>
+            <div class="barItem" >
+                <img class="barItemImage" src="{% static "icons/settingsIcon.png" %}">
+                <p class="barItemName">
+                    <a href="{% url "settings" %}">Settings</a></p>
+            </div>
+            <div class="barItem">
+                <img class="barItemImage" src="{% static "icons/logoutIcon.png" %}">
+                <p class="barItemName">
+                    <a href="{% url "logout" %}">Logout</a>
+                </p>
+            </div>
+        </aside>
+        <main class="main">
+
+        </main>
+{% endblock %}
