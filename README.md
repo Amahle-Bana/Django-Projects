@@ -2,4 +2,4 @@
 
 This is a repository for my Django projects.
 
-* To Do Application
+* To Do Event Planner Application
