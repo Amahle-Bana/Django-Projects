@@ -1,0 +1,52 @@
+{% load static %}
+{% load i18n %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- LOGIN PAGE TITLE -->
+        <title>PaperPlanes</title>
+        <!-- CSS FILE -->
+        <link href="{% static 'mail/styles.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        <section class="registerSection">
+            <div class="loginLogo">
+                <img class="logo" src="{% static "icons/emailRedIcon.png" %}">
+                <p class="name">PaperPlanes</p>
+            </div>
+
+            <form class="registerForm" action="{% url 'register' %}" method="post">
+                {% csrf_token %}
+                <h2 class="registerHeading">Register</h2>
+                <div class="registerInput1">
+                    <input autofocus class="registerUsername" type="text" name="username" placeholder="Username">
+                </div>
+                <div class="registerInput2">
+                    <input autofocus class="registerEmail" type="email" name="email" placeholder="Email">
+                </div>
+                <div class="registerInput3">
+                    <input class="registerPassword" type="password" name="password" placeholder="Password">
+                </div>
+                <div class="registerInput4">
+                    <input class="registerConfirmation" type="password" name="confirmation" placeholder="Confirm Password">
+                </div>
+                <button class="registerSubmit" type="submit">Register</button>
+            {% if error_message1 %}
+                <div class="registerMessage">{{ error_message1 }}</div>
+            {% endif %}
+            {% if error_message2 %}
+                <div class="registerMessage">{{ error_message2 }}</div>
+            {% endif %}
+            {% if password_message %}
+                <div class="registerMessage">{{ password_message }}</div>
+            {% endif %}
+            {% if email_message %}
+                <div class="registerMessage">{{ email_message }}</div>
+            {% endif %}
+
+                <p class="registerParagraph">Don't have an account? <a href="{% url 'login' %}">Login here.</a></p>
+
+            </form>
+        </section>
+    </body>

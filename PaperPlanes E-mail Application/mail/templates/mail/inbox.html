@@ -1,0 +1,76 @@
+{% extends "mail/layout.html" %}
+{% load static %}
+
+{% block body %}
+    <aside class="sidebar">
+        <div id="compose" class="composeSection">
+            <img src="{% static "icons/composeRedIcon.png" %}" class="composeIcon">
+            <p class="composeName">Compose</p>
+        </div>
+        <div class="optionsSection">
+            <div class="inboxSection" id="inbox">
+                <img src="{% static "icons/inboxRedIcon.png" %}" class="inboxLogo">
+                <p>Inbox</p>
+            </div>
+            <div class="sentSection" id="sent">
+                <img src="{% static "icons/sentRedIcon.png" %}" class="sentIcon">
+                <p>Sent</p>
+            </div>
+            <div class="archivedSection" id="archived">
+                <img src="{% static "icons/archivedRedIcon.png" %}" class="archivedIcon">
+                <p>Archived</p>
+            </div>
+            <div class="calenderSection">
+                <img src="{% static "icons/calenderRedIcon.png" %}" class="calenderIcon">
+                <p>Calender</p>
+            </div>
+            <div class="moreSection">
+                <img src="{% static "icons/dropdownRedIcon.png" %}" class="moreIcon">
+                <p>More</p>
+            </div>
+        </div>
+        <div class="exitSection">
+            <a class="logoutSection" href="{% url "logout" %}">
+                <img src="{% static "icons/logoutRedIcon.png" %}" class="logoutIcon">
+                <p>Logout</p>
+            </a>
+        </div>
+
+    </aside>
+    <main class="main">
+        <hr>
+
+        <div id="emails-view">
+        </div>
+
+        <div id="email-detail-view">
+        </div>
+
+        <div id="compose-view">
+            <form id="compose-form">
+                <div class="composeFromBlock">
+                    <p>From: </p>
+                    <input disabled class="fromInput" value="{{ request.user.email }}">
+                </div>
+                <div class="composeToBlock">
+                    <p>To: </p>
+                    <input id="compose-recipients" class="form-control">
+                </div>
+                <div class="composeSubjectBlock">
+                    <p>Subject: </p>
+                    <input class="form-control" id="compose-subject" placeholder="Subject">
+                </div>
+                <div class="composeTextBlock">
+                    <textarea id="compose-body" placeholder="Body"></textarea>
+                </div>
+                <div class="composeSubmitBlock">
+                    <input type="submit" value="Send"/>
+                </div>
+            </form>
+        </div>
+    </main>
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'mail/inbox.js' %}"></script>
+{% endblock %}

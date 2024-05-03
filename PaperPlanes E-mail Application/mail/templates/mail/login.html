@@ -1,0 +1,47 @@
+{% load static %}
+{% load i18n %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- LOGIN PAGE TITLE -->
+        <title>PaperPlanes</title>
+        <!-- CSS FILE -->
+        <link href="{% static 'mail/styles.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        <section class="loginSection">
+            <div class="loginLogo">
+                <img class="logo" src="{% static "icons/emailRedIcon.png" %}">
+                <p class="name">PaperPlanes</p>
+            </div>
+
+            <form class="loginForm" action="{% url 'login' %}" method="post">
+                {% csrf_token %}
+                <h2 class="loginHeading">Login</h2>
+                <div class="loginInput1">
+                    <input autofocus class="loginEmail" type="text" name="username" placeholder="Enter Username">
+                </div>
+                <div class="loginInput2">
+                    <input class="loginPassword" type="password" name="password" placeholder="Enter Password">
+                </div>
+                <button class="loginSubmit" type="submit">Login</button>
+
+            {% if message %}
+                <div class="loginMessage">{{ message }}</div>
+            {% endif %}
+            {% if username_password_message %}
+                <div class="loginMessage">{{ username_password_message }}</div>
+            {% endif %}
+            {% if username_message %}
+                <div class="loginMessage">{{ username_message }}</div>
+            {% endif %}
+            {% if password_message %}
+                <div class="loginMessage">{{ password_message }}</div>
+            {% endif %}
+
+                <p class="loginParagraph">Don't have an account? <a href="{% url 'register' %}">Register here.</a></p>
+
+            </form>
+        </section>
+    </body>

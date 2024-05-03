@@ -1,0 +1,914 @@
+* {
+    margin: 0px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+a {
+    text-decoration: none;
+}
+button {
+    text-decoration: none;
+}
+
+/* LOGIN PAGE STYLING */
+
+.loginSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 657px;
+    background-color: rgb(252, 227, 227);
+}
+.loginSection .loginLogo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+.loginSection .loginLogo img {
+    width: 70px;
+}
+.loginSection .loginLogo p {
+    font-size: 30px;
+    color: #B10000;
+    font-weight: bold;
+}
+.loginSection .loginForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    width: 400px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px 2px rgb(212, 212, 212);
+    background-color: #ffd1d1;
+}
+.loginSection .loginForm {
+    box-shadow: 1px 1px 2px 2px #fdb9b9;
+}
+.loginSection .loginForm .loginHeading {
+    color: #B10000;
+    font-weight: bold;
+}
+.loginSection .loginInput1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.loginSection .loginInput1 .loginEmail {
+    width: 300px;
+    height: 50px;
+    border-radius: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 20px;
+    margin: 15px;
+    border: 1px solid rgb(212, 212, 212);
+}
+.loginSection .loginInput1 .loginEmail:focus {
+    outline: grey;
+}
+.loginSection .loginInput2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginSection .loginInput2 .loginPassword {
+    width: 300px;
+    height: 50px;
+    border-radius: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 20px;
+    margin: 15px;
+    border: 1px solid rgb(212, 212, 212);
+}
+.loginSection .loginInput2 .loginPassword:focus {
+    outline: grey;
+}
+.loginSection .loginForm .loginSubmit {
+    height: 40px;
+    width: 100px;
+    border-radius: 15px;
+    margin: 15px;
+    cursor: pointer;
+    background-color: #f88b8b;
+    border: none;
+    font-size: 17px;
+    color: #B10000;
+}
+.loginSection .loginForm .loginSubmit:hover {
+    box-shadow: 0px 0px 2px 2px #fdb9b9;
+}
+.loginSection .loginForm .loginMessage {
+    font-size: 15px;
+    margin: 15px;
+    color: red;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center
+}
+
+.loginSection .loginForm .loginParagraph {
+    font-size: 20px;
+    margin: 15px;
+    color: black;
+}
+.loginSection .loginForm .loginParagraph a {
+    color: #B10000;
+    font-weight: bold;
+}
+
+/* REGISTER PAGE STYLING */
+
+.registerSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 655px;
+    background-color: rgb(252, 227, 227);
+}
+.registerSection .loginLogo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.registerSection .loginLogo img {
+    width: 70px;
+}
+.registerSection .loginLogo p {
+    font-size: 30px;
+    color: #B10000;
+    font-weight: bold;
+}
+.registerSection .registerForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 550px;
+    width: 400px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px 2px rgb(212, 212, 212);
+    box-shadow: 1px 1px 2px 2px #fdb9b9;
+}
+.registerSection .registerForm .registerHeading {
+    color: #B10000;
+}
+.registerSection .registerInput1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.registerSection .registerInput1 .registerUsername {
+    width: 300px;
+    height: 50px;
+    border-radius: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 20px;
+    margin: 15px;
+    border: 1px solid rgb(212, 212, 212);
+}
+.registerSection .registerInput1 .registerUsername:focus {
+    outline: grey;
+}
+.registerSection .registerInput2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.registerSection .registerInput2 .registerEmail {
+    width: 300px;
+    height: 50px;
+    border-radius: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 20px;
+    margin: 15px;
+    border: 1px solid rgb(212, 212, 212);
+}
+.registerSection .registerInput2 .registerEmail:focus {
+    outline: grey;
+}
+.registerSection .registerInput3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.registerSection .registerInput3 .registerPassword {
+    width: 300px;
+    height: 50px;
+    border-radius: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 20px;
+    margin: 15px;
+    border: 1px solid rgb(212, 212, 212);
+}
+.registerSection .registerInput3 .registerPassword:focus {
+    outline: grey;
+}
+.registerSection .registerInput4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.registerSection .registerInput4 .registerConfirmation {
+    width: 300px;
+    height: 50px;
+    border-radius: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 20px;
+    margin: 15px;
+    border: 1px solid rgb(212, 212, 212);
+}
+.registerSection .registerInput4 .registerConfirmation:focus {
+    outline: grey;
+}
+.registerSection .registerForm .registerSubmit {
+    height: 40px;
+    width: 100px;
+    border-radius: 15px;
+    margin: 15px;
+    cursor: pointer;
+    background-color: #f88b8b;
+    border: none;
+    font-size: 17px;
+    color: #B10000;
+}
+.registerSection .registerForm .registerSubmit:hover {
+    box-shadow: 0px 0px 2px 2px #fdb9b9;
+}
+.registerSection .registerForm .registerMessage {
+    font-size: 15px;
+    margin: 15px;
+    color: red;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center
+}
+
+.registerSection .registerForm .registerParagraph {
+    font-size: 20px;
+    margin: 15px;
+    color: black;
+}
+.registerSection .registerForm .registerParagraph a {
+    color: #B10000;
+}
+
+/* LAYOUT PAGE STYLING */
+
+.header {
+    height: 70px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(252, 227, 227);
+}
+.header .headerLogo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.header .headerLogo .logo {
+    width: 40px;
+}
+.header .headerLogo .name {
+    font-size: 30px;
+    color: #B10000;
+    font-weight: bold;
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+} 
+.header .headerSearch {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.header .headerSearch .search {
+    height: 40px;
+    width: 700px;
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 60px;
+    font-size: 17px;
+    border: 1px solid #ffd1d1;
+    background-color: #ffd1d1;
+    color: #B10000;
+}
+.header .headerSearch .search:focus {
+    outline: #B10000;
+}
+.header .headerSearch .logo {
+    width: 20px;
+    position: absolute;
+    left: 75%;
+    top:2.6%;
+    padding: 8px;
+    border-radius: 30px;
+}
+.header .headerSearch .logo:hover {
+    background-color: #fdb9b9;
+}
+.header .headerRight {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+    height: 100%;
+}
+.header .headerRight .support {
+    width: 25px;
+    border-radius: 30px;
+    padding: 4px;
+    margin-right: 17px;
+    cursor: pointer;
+}
+.header .headerRight .support:hover {
+    background-color: #fdb9b9;
+}
+.header .headerRight .settings {
+    width: 25px;
+    border-radius: 30px;
+    padding: 4px;
+    margin-right: 17px;
+    cursor: pointer;
+}
+.header .headerRight .settings:hover {
+    background-color: #fdb9b9;
+}
+.header .headerRight .userEmail {
+    color: #B10000;
+    font-size: 15px;
+    margin-right: 20px;
+    padding: 9px;
+    padding-right: 15px;
+    padding-left: 15px;
+    border-radius: 30px;
+    background-color: #f88b8b;
+    font-weight: bold;
+    font-size: 23px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.header .headerRight .userEmail:hover {
+    box-shadow: 0px 0px 2px 2px #fdb9b9;
+}
+/* SIDEBAR STYLING */
+
+.container {
+    display: grid;
+    grid-template-columns: 2fr 9fr;
+    height: 585px;
+}
+.container .sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: rgb(252, 227, 227);
+}
+.container .sidebar .composeSection {
+    width: 170px;
+    height: 77px;
+    margin-top: 20px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 20px;
+    background-color: #f88b8b;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.container .sidebar .composeSection:hover {
+    box-shadow: 1px 1px 2px 2px #fc6b6b;
+}
+.container .sidebar .composeSection .composeIcon{
+    width: 30px;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+.container .sidebar .composeSection .composeName {
+    color: #B10000;
+    font-size: 18px;
+}
+.container .sidebar .optionsSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100%;
+    width: 100%;
+}
+.container .sidebar .optionsSection .inboxSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.container .sidebar .optionsSection .inboxSection:hover {
+    background-color: #fdb9b9;
+}
+.container .sidebar .optionsSection .inboxSection img {
+    width: 30px;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+.container .sidebar .optionsSection .inboxSection p {
+    font-size: 20px;
+    color: #B10000;
+}
+.container .sidebar .optionsSection .sentSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 5px;
+    margin-left: 10px;
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.container .sidebar .optionsSection .sentSection:hover {
+    background-color: #fdb9b9;
+}
+.container .sidebar .optionsSection .sentSection img {
+    width: 25px;
+    margin-left: 13px;
+    margin-right: 20px;
+}
+.container .sidebar .optionsSection .sentSection p {
+    font-size: 20px;
+    color: #B10000;
+}
+.container .sidebar .optionsSection .archivedSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 5px;
+    margin-left: 10px;
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.container .sidebar .optionsSection .archivedSection:hover {
+    background-color: #fdb9b9;
+}
+.container .sidebar .optionsSection .archivedSection img {
+    width: 27px;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+.container .sidebar .optionsSection .archivedSection p {
+    font-size: 20px;
+    color: #B10000;
+}
+.container .sidebar .optionsSection .calenderSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 5px;
+    margin-left: 10px;
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.container .sidebar .optionsSection .calenderSection:hover {
+    background-color: #fdb9b9;
+}
+.container .sidebar .optionsSection .calenderSection img {
+    width: 30px;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+.container .sidebar .optionsSection .calenderSection p {
+    font-size: 20px;
+    color: #B10000;
+}
+.container .sidebar .optionsSection .moreSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 5px;
+    margin-left: 10px;
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.container .sidebar .optionsSection .moreSection:hover {
+    background-color: #fdb9b9;
+}
+.container .sidebar .optionsSection .moreSection img {
+    width: 25px;
+    margin-left: 11px;
+    margin-right: 20px;
+}
+.container .sidebar .optionsSection .moreSection p {
+    font-size: 20px;
+    color: #B10000;
+}
+.container .sidebar .exitSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100px;
+    width: 100%;
+}
+.container .sidebar .exitSection .logoutSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 5px;
+    margin-left: 10px;
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    color: #B10000;
+    font-size: 20px;
+    cursor: pointer;
+}
+.container .sidebar .exitSection .logoutSection:hover {
+    background-color: #fdb9b9;
+}
+.container .sidebar .exitSection .logoutSection img {
+    width: 25px;
+    margin-left: 11px;
+    margin-right: 20px;
+}
+.container .sidebar .optionsSection .moreSection p {
+    font-size: 20px;
+    color: #B10000;
+
+}
+
+/* COMPOSE EMAIL STYLING */
+.container {
+    border: none;
+}
+#compose-view {
+    height: 580px;
+    background-color: rgb(252, 227, 227);
+}
+
+#compose-view #compose-form {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 10fr 1fr;
+    height: 100%;
+    width: 100%;
+}
+#compose-view #compose-form .composeFromBlock {
+    height: 100%;
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 30px;
+    background-color: rgb(253, 239, 239);
+}
+#compose-view #compose-form .composeFromBlock p {
+    margin-right: 20px;
+    margin-left: 20px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #B10000;
+    font-weight: bold;
+}
+#compose-view #compose-form .composeFromBlock input {
+    height: 80%;
+    width: 1000px;
+    background-color: transparent;
+    border: none;
+}
+
+#compose-view #compose-form .composeToBlock {
+    height: 100%;
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(253, 239, 239);
+}
+#compose-view #compose-form .composeToBlock p {
+    margin-right: 20px;
+    margin-left: 38px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #B10000;
+    font-weight: bold;
+}
+#compose-view #compose-form .composeToBlock input {
+    height: 80%;
+    width: 1000px;
+    background-color: transparent;
+    border: none;
+}
+#compose-view #compose-form .composeToBlock input:focus {
+    outline: none;
+}
+#compose-view #compose-form .composeSubjectBlock {
+    height: 100%;
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(253, 239, 239);
+}
+#compose-view #compose-form .composeSubjectBlock p {
+    margin-right: 20px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #B10000;
+    font-weight: bold;
+}
+#compose-view #compose-form .composeSubjectBlock input {
+    height: 80%;
+    width: 1000px;
+    background-color: transparent;
+    border: none;
+}
+#compose-view #compose-form .composeSubjectBlock input:focus {
+    outline: none;
+}
+#compose-view #compose-form .composeSubjectBlock {
+    height: 100%;
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(253, 239, 239);
+}
+#compose-view #compose-form .composeTextBlock {
+    height: 100%;
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(253, 239, 239);
+}
+#compose-view #compose-form .composeTextBlock textarea {
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#compose-view #compose-form .composeTextBlock textarea:focus {
+    outline: none;
+}
+#compose-view #compose-form .composeSubmitBlock {
+    height: 100%;
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: rgb(253, 239, 239);
+}
+#compose-view #compose-form .composeSubmitBlock input {
+    background-color: transparent;
+    background-color: #f88b8b;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-right: 40px;
+    border: none;
+    color: #B10000;
+    font-weight: bold;
+}
+
+/*============ MAILBOX STYLING ============*/
+
+#emails-view {
+    background-color: rgb(253, 239, 239);
+    height: 100%;
+}
+/* INBOX STLYING */
+
+.mailboxHeader {
+    background-color: rgb(253, 239, 239); 
+    color: #B10000;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+.emailItem1 {
+    background-color: #fdb9b9;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    height: 50px;
+    display: grid;
+    grid-template-columns: 2fr 5fr 1fr;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 20px;
+    color: #B10000;
+}
+.emailItem2 {
+    background-color: #ffd1d1;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    height: 50px;
+    display: grid;
+    grid-template-columns: 2fr 5fr 1fr;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 20px;
+    color: #B10000;
+}
+.emailFrom {
+    margin-left: 30px;
+    margin-right: 10px;
+}
+.emailSubject {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.emailSubject p {
+    padding-left: 10px;
+}
+.emailTime {
+    justify-content:end;
+    align-items:right;
+    margin-left: 10px;
+}
+
+.read{
+    background-color: #ffd1d1;
+}
+.unread {
+    background-color: #fdb9b9;
+}
+
+/* EMAIL DETAIL VIEW STYLING */
+#email-detail-view {
+    height: 550px;
+    background-color: rgb(252, 227, 227);
+    display: grid;
+    grid-template-rows: 1fr 1fr 10fr 1fr 1fr;
+    width: 100%;
+}
+
+.emailFromDetail {
+    height: calc(580px * 1/14);
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    border-top-left-radius: 30px;
+    background-color: rgb(253, 239, 239);
+}
+.emailFromDetailParagraph {
+    margin-right: 40px;
+    margin-left: 20px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #B10000;
+    font-weight: bold;
+}
+.emailSubjectDetailInput {
+    margin-left: 2px;
+    height: 80%;
+    width: 1000px;
+    background-color: transparent;
+}
+.emailSubjectDetail {
+    height: calc(580px * 1/14);
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgb(253, 239, 239);
+}
+.emailSubjectDetailParagraph {
+    margin-right: 20px;
+    margin-left: 20px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #B10000;
+    font-weight: bold;
+}
+.emailSubjectDetailInput {
+    height: 60%;
+    width: 1000px;
+    background-color: transparent;
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.emailTextDetail {
+    height: calc(580px * 10/14);
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: rgb(253, 239, 239);
+}
+.emailTextDetailTextarea {
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.emailTimeDetail {
+    height: calc(580px * 1/14);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: rgb(253, 239, 239);
+    padding-right: 60px;
+}
+.emailActionDetail {
+    height: calc(580px * 1/14);
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: rgb(253, 239, 239);
+}
+.emailActionDetailArchive {
+    background-color: transparent;
+    background-color: #f88b8b;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-right: 40px;
+    border: none;
+    color: #B10000;
+    font-weight: bold;
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+.emailActionDetailReply {
+    background-color: transparent;
+    background-color: #f88b8b;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-right: 40px;
+    border: none;
+    color: #B10000;
+    font-weight: bold;
+}
+

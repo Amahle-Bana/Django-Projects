@@ -1,0 +1,38 @@
+{% load static %}
+{% load i18n %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- LOGIN PAGE TITLE -->
+        <title>{% block title %}PaperPlanes{% endblock %}</title>
+        <!-- CSS FILE -->
+        <link rel="stylesheet" href="{% static 'mail/styles.css' %}">
+        <!-- JAVASCRIPT FILE -->
+        {% block script %}
+        {% endblock %}
+    </head>
+    <body>
+        <header class="header">
+            <div class="headerLogo">
+                <img class="logo" src="{% static "icons/emailRedIcon.png" %}">
+                <p class="name">PaperPlanes</p>
+            </div>
+            <div class="headerSearch">
+                <input class="search" type="text" name="search" placeholder="Search">
+                <a><img src="{% static "icons/searchRedIcon.png" %}" class="logo"></a>
+            </div>
+            <div class="headerRight">
+                <img src="{% static "icons/supportRedIcon.png" %}" class="support">
+                <img src="{% static "icons/settingsRedIcon.png" %}" class="settings">
+                {% if user.is_authenticated %}
+                    <p class="userEmail">{{ current_user }}</p>
+                {% endif %}
+            </div>
+        </header>
+        <section class="container">
+            {% block body %}
+            {% endblock %}
+        </section>
+    </body>
+</html>
