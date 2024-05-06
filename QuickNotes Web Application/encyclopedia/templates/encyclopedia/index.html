@@ -1,0 +1,16 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    QuickNotes
+{% endblock %}
+
+{% block body %}
+    <h1>Notes</h1>
+
+    <div class="bodyItems">
+        {% for entry in entries %}
+            <a class="noteItem" href="{% url 'entry' title=entry %}"><div>{{ entry }}</div></a>
+        {% endfor %}
+    </div>
+
+{% endblock %}

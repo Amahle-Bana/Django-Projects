@@ -1,0 +1,17 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    QuickNotes
+{% endblock %}
+
+{% block body %}
+    <h1>New Page</h1>
+
+    <form action="{% url 'newentry' %}" method="POST">
+        {% csrf_token %}
+        <label>Title:</label><br>
+        <input class="newInput" type="text" name="title" placeholder="Enter A Title"><br>
+        <label>Enter Text (Enter Text Using Markdown):</label><br>
+        <textarea class="newTextarea" name="content" rows="2" cols="20" placeholder="Write A Note"></textarea><br>
+        <input class="newSubmit" type="submit" value="Submit">
+{% endblock %}

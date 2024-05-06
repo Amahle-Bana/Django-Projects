@@ -1,0 +1,218 @@
+/* UNIVERSAL STYLING */
+a {
+    text-decoration: none;
+    color: #FF8A00;
+    margin-bottom: 10px;
+}
+a:hover {
+    text-decoration: none;
+    color: #FF8A00;
+}
+label {
+    color: #FF8A00;
+    margin-left: 20px;
+}
+/* SIDEBAR STYLING */
+.sidebar {
+    background-color: #f0f0f0;
+    height: 100vh;
+    padding: 20px;
+    background-color: rgb(12, 11, 11);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.notesLogo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.sidebar h4 {
+    color: #FF8A00;
+}
+.search {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    font-size: 15px;
+    line-height: 15px;
+    border-radius: 20px;
+    height: 40px;
+    padding-left: 17px;
+    padding-right: 17px;
+    border: 2px solid #FF8A00;
+    background-color: rgb(12, 11, 11);
+    color: #FF8A00;
+}
+.search:focus {
+    outline: #FF8A00;
+}
+
+/* BODY STYLING */
+body {
+    margin: 0;
+    background-color: rgb(19, 18, 18);
+    color: #FF8A00;
+}
+code {
+    white-space: pre;
+}
+h1 {
+    font-size: 25px;
+    color: #FF8A00;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.bodyItems {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.noteItem {
+    border: 2px solid #FF8A00;
+    margin: 20px;
+    height: 200px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    animation: 3s ease-in-out;
+}
+.noteItem div {
+    padding-top: 10px;
+}
+.noteItem:hover {
+    transform: translateY(-10px);
+}
+textarea {
+    height: 90vh;
+    width: 80%;
+}
+.main {
+    padding: 10px;
+}
+
+/* ENTRY PAGE STYLING */
+.newInput {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 400px;
+    font-size: 15px;
+    line-height: 15px;
+    border-radius: 20px;
+    height: 40px;
+    padding-left: 17px;
+    padding-right: 17px;
+    border: 2px solid #FF8A00;
+    background-color: rgb(12, 11, 11);
+    color: #FF8A00;
+    margin-left: 20px;
+}
+.newInput:focus {
+    outline: #FF8A00;
+}
+.newTextarea {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 1000px;
+    height: 350px;
+    font-size: 15px;
+    line-height: 15px;
+    border-radius: 20px;
+    padding: 17px;
+    border: 2px solid #FF8A00;
+    background-color: rgb(12, 11, 11);
+    color: #FF8A00;
+    margin-left: 20px;
+}
+.newTextarea:focus {
+    outline: #FF8A00;
+}
+.newSubmit {
+    padding: 3px;
+    border-radius: 20px;
+    width: 100px;
+    height: 35px;
+    margin-left: 10px;
+    margin-left: 20px;
+    background-color: #FF8A00;
+    border: none;
+    color: black;
+}
+.newSubmit:hover {
+    border: 2px solid black;
+}
+/* ENTRY PAGE STYLING */
+.existingTitle {
+    margin: 20px;
+    color: #FF8A00;
+}
+.existingText {
+    padding: 3px;
+    border-radius: 20px;
+    width: 100px;
+    height: 35px;
+    margin-left: 20px;
+    background-color: #FF8A00;
+    border: none;
+    color: black;
+}
+.entryContent {
+    color: #FF8A00;
+}
+
+/* EDIT PAGE STYLING */
+.editInput{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 400px;
+    font-size: 15px;
+    line-height: 15px;
+    border-radius: 20px;
+    height: 40px;
+    padding-left: 17px;
+    padding-right: 17px;
+    border: 2px solid #FF8A00;
+    background-color: rgb(12, 11, 11);
+    color: #FF8A00;
+    margin-left: 20px;
+}
+.editInput:focus {
+    outline: #FF8A00;
+}
+.editTextarea {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 1000px;
+    height: 350px;
+    font-size: 15px;
+    line-height: 15px;
+    border-radius: 20px;
+    padding: 17px;
+    border: 2px solid #FF8A00;
+    background-color: rgb(12, 11, 11);
+    color: #FF8A00;
+    margin-left: 20px;
+}
+.editTextarea:focus {
+    outline: #FF8A00;
+}
+.editSubmit {
+    padding: 3px;
+    border-radius: 20px;
+    width: 100px;
+    height: 35px;
+    margin-left: 10px;
+    margin-left: 20px;
+    background-color: #FF8A00;
+    border: none;
+    color: black;
+}
+.editSubmit:hover {
+    border: 2px solid black;
+}
